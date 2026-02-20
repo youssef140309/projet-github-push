@@ -1,0 +1,514 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Exercices Pratiques">
+  <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-display font-bold mb-4">Exercices Pratiques</h1>
+      <p class="text-xl text-green-100">Mettez en pratique vos connaissances sur Git et GitHub</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <div class="card bg-blue-50 border-blue-200 mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">📋 À propos de ces exercices</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li>✓ <strong>15 exercices progressifs</strong> pour maîtriser Git et GitHub</li>
+        <li>✓ <strong>Sauvegarde automatique</strong> de vos réponses</li>
+        <li>✓ Des exercices théoriques et pratiques</li>
+        <li>✓ Difficulté croissante du débutant au confirmé</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 1: EXERCICES DE COMPRÉHENSION -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-display font-bold text-gray-900 mb-6 border-b-2 border-blue-500 pb-2">
+        📚 Partie 1 : Compréhension (5 exercices)
+      </h2>
+
+      <!-- Exercice 1 -->
+      <div class="card bg-yellow-50 border-yellow-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">✍️ Exercice 1 : Git vs GitHub</h4>
+        <p class="text-gray-700 mb-4">Expliquez avec vos propres mots la différence entre Git et GitHub (minimum 3 phrases) :</p>
+        <textarea 
+          id="ex1" 
+          class="input-field h-32 resize-none"
+          placeholder="Écrivez votre réponse ici..."
+        ></textarea>
+      </div>
+
+      <!-- Exercice 2 -->
+      <div class="card bg-yellow-50 border-yellow-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">✍️ Exercice 2 : Configuration Git</h4>
+        <p class="text-gray-700 mb-4">Notez les commandes que vous avez utilisées pour configurer Git sur votre ordinateur :</p>
+        <textarea 
+          id="ex2" 
+          class="input-field h-32 resize-none"
+          placeholder="Collez ici les commandes de configuration..."
+        ></textarea>
+        <p class="text-gray-700 mt-4 mb-2">Quel est votre nom d'utilisateur GitHub ?</p>
+        <input 
+          type="text" 
+          id="ex2-github" 
+          class="input-field"
+          placeholder="Votre pseudo GitHub"
+        />
+      </div>
+
+      <!-- Exercice 3 -->
+      <div class="card bg-yellow-50 border-yellow-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">✍️ Exercice 3 : Les commandes essentielles</h4>
+        <p class="text-gray-700 mb-4">Quelle commande utiliseriez-vous pour :</p>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2">a) Voir les fichiers modifiés ?</label>
+            <input type="text" id="ex3a" class="input-field" placeholder="Tapez la commande..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">b) Ajouter tous les fichiers ?</label>
+            <input type="text" id="ex3b" class="input-field" placeholder="Tapez la commande..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">c) Créer un commit ?</label>
+            <input type="text" id="ex3c" class="input-field" placeholder="Tapez la commande..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 4 -->
+      <div class="card bg-yellow-50 border-yellow-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">✍️ Exercice 4 : Workflow GitHub</h4>
+        <p class="text-gray-700 mb-4">Dans quel ordre effectueriez-vous ces étapes pour pousser un nouveau projet sur GitHub ? Numérotez de 1 à 5 :</p>
+        <div class="space-y-2">
+          <div class="flex items-center">
+            <input type="number" id="ex4a" class="input-field w-16 mr-4" min="1" max="5" />
+            <span class="text-gray-700">Créer un dépôt sur GitHub</span>
+          </div>
+          <div class="flex items-center">
+            <input type="number" id="ex4b" class="input-field w-16 mr-4" min="1" max="5" />
+            <span class="text-gray-700">Faire git init dans le dossier local</span>
+          </div>
+          <div class="flex items-center">
+            <input type="number" id="ex4c" class="input-field w-16 mr-4" min="1" max="5" />
+            <span class="text-gray-700">Faire git remote add origin</span>
+          </div>
+          <div class="flex items-center">
+            <input type="number" id="ex4d" class="input-field w-16 mr-4" min="1" max="5" />
+            <span class="text-gray-700">Faire git add . et git commit</span>
+          </div>
+          <div class="flex items-center">
+            <input type="number" id="ex4e" class="input-field w-16 mr-4" min="1" max="5" />
+            <span class="text-gray-700">Faire git push</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 5 -->
+      <div class="card bg-yellow-50 border-yellow-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">✍️ Exercice 5 : URL de déploiement</h4>
+        <p class="text-gray-700 mb-4">Une fois que vous aurez déployé un projet sur Netlify, notez l'URL de votre site :</p>
+        <input 
+          type="url" 
+          id="ex5" 
+          class="input-field"
+          placeholder="https://mon-site.netlify.app"
+        />
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXERCICES PRATIQUES AVANCÉS -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-display font-bold text-gray-900 mb-6 border-b-2 border-green-500 pb-2">
+        🛠️ Partie 2 : Mise en pratique (5 exercices)
+      </h2>
+
+      <!-- Exercice 6 -->
+      <div class="card bg-green-50 border-green-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🔧 Exercice 6 : Créer votre premier dépôt</h4>
+        <p class="text-gray-700 mb-4"><strong>Objectif :</strong> Créer un nouveau projet et le pousser sur GitHub</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Instructions :</p>
+          <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+            <li>Créez un nouveau dossier nommé "mon-premier-projet"</li>
+            <li>À l'intérieur, créez un fichier <code class="bg-gray-100 px-2 py-1 rounded">README.md</code> avec votre nom</li>
+            <li>Initialisez Git dans ce dossier</li>
+            <li>Faites votre premier commit</li>
+            <li>Créez un dépôt sur GitHub</li>
+            <li>Liez votre projet local au dépôt GitHub</li>
+            <li>Poussez votre code</li>
+          </ol>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Collez l'URL de votre dépôt GitHub :</label>
+            <input type="url" id="ex6-url" class="input-field" placeholder="https://github.com/votre-nom/mon-premier-projet" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Listez les commandes que vous avez utilisées :</label>
+            <textarea id="ex6-commands" class="input-field h-40 resize-none" placeholder="git init&#10;git add .&#10;..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 7 -->
+      <div class="card bg-green-50 border-green-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🔧 Exercice 7 : Créer un fichier .gitignore</h4>
+        <p class="text-gray-700 mb-4"><strong>Objectif :</strong> Apprendre à exclure des fichiers du dépôt</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Instructions :</p>
+          <p class="text-gray-700 mb-3">Créez un fichier <code class="bg-gray-100 px-2 py-1 rounded">.gitignore</code> qui ignore :</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+            <li>Le dossier <code class="bg-gray-100 px-2 py-1 rounded">node_modules/</code></li>
+            <li>Les fichiers <code class="bg-gray-100 px-2 py-1 rounded">.env</code></li>
+            <li>Les fichiers <code class="bg-gray-100 px-2 py-1 rounded">.log</code></li>
+            <li>Le dossier <code class="bg-gray-100 px-2 py-1 rounded">dist/</code></li>
+          </ul>
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-2 font-medium">Écrivez le contenu de votre .gitignore :</label>
+          <textarea id="ex7" class="input-field h-32 resize-none font-mono text-sm" placeholder="node_modules/&#10;.env&#10;..."></textarea>
+        </div>
+      </div>
+
+      <!-- Exercice 8 -->
+      <div class="card bg-green-50 border-green-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🔧 Exercice 8 : Messages de commit professionnels</h4>
+        <p class="text-gray-700 mb-4"><strong>Objectif :</strong> Écrire des messages de commit clairs et descriptifs</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Situation :</p>
+          <p class="text-gray-700">Vous avez fait les modifications suivantes dans votre projet :</p>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2">a) Vous avez corrigé un bug qui faisait planter l'application sur mobile</label>
+            <input type="text" id="ex8a" class="input-field" placeholder="Écrivez le message de commit..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">b) Vous avez ajouté une nouvelle page de contact avec un formulaire</label>
+            <input type="text" id="ex8b" class="input-field" placeholder="Écrivez le message de commit..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">c) Vous avez mis à jour la documentation du README</label>
+            <input type="text" id="ex8c" class="input-field" placeholder="Écrivez le message de commit..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 9 -->
+      <div class="card bg-green-50 border-green-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🔧 Exercice 9 : Cloner un projet existant</h4>
+        <p class="text-gray-700 mb-4"><strong>Objectif :</strong> Télécharger et modifier un projet depuis GitHub</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Instructions :</p>
+          <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+            <li>Trouvez un projet public sur GitHub qui vous intéresse</li>
+            <li>Clonez-le sur votre ordinateur avec <code class="bg-gray-100 px-2 py-1 rounded">git clone</code></li>
+            <li>Explorez le code</li>
+            <li>Notez ce que vous avez appris</li>
+          </ol>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL du projet cloné :</label>
+            <input type="url" id="ex9-url" class="input-field" placeholder="https://github.com/..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Qu'avez-vous découvert dans ce projet ?</label>
+            <textarea id="ex9-discovery" class="input-field h-32 resize-none" placeholder="Technologies utilisées, structure du projet, bonnes pratiques..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 10 -->
+      <div class="card bg-green-50 border-green-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🔧 Exercice 10 : Gérer un conflit</h4>
+        <p class="text-gray-700 mb-4"><strong>Objectif :</strong> Comprendre les conflits Git et comment les résoudre</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Situation :</p>
+          <p class="text-gray-700 mb-3">Vous travaillez sur un fichier <code class="bg-gray-100 px-2 py-1 rounded">index.html</code>. Votre collègue a modifié la même ligne et a poussé ses modifications. Quand vous essayez de faire <code class="bg-gray-100 px-2 py-1 rounded">git pull</code>, Git vous signale un conflit.</p>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2">Que devez-vous faire pour résoudre ce conflit ? (décrivez les étapes)</label>
+            <textarea id="ex10" class="input-field h-40 resize-none" placeholder="1. ..."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MINI-PROJETS -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-display font-bold text-gray-900 mb-6 border-b-2 border-purple-500 pb-2">
+        🚀 Partie 3 : Mini-Projets (5 exercices)
+      </h2>
+
+      <!-- Exercice 11 -->
+      <div class="card bg-purple-50 border-purple-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🎯 Exercice 11 : Portfolio Personnel</h4>
+        <p class="text-gray-700 mb-4"><strong>Projet :</strong> Créer un portfolio HTML/CSS simple et le déployer</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Cahier des charges :</p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <li>Une page HTML avec votre nom, formation, compétences</li>
+            <li>Un fichier CSS pour le style</li>
+            <li>Au moins 3 sections (À propos, Compétences, Contact)</li>
+            <li>Un README.md expliquant le projet</li>
+            <li>Déployé sur Netlify</li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL GitHub du projet :</label>
+            <input type="url" id="ex11-github" class="input-field" placeholder="https://github.com/votre-nom/portfolio" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL Netlify du site déployé :</label>
+            <input type="url" id="ex11-netlify" class="input-field" placeholder="https://mon-portfolio.netlify.app" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 12 -->
+      <div class="card bg-purple-50 border-purple-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🎯 Exercice 12 : Site de Documentation</h4>
+        <p class="text-gray-700 mb-4"><strong>Projet :</strong> Créer un mini-site de documentation technique</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Objectif :</p>
+          <p class="text-gray-700 mb-3">Documenter un sujet technique de votre choix (ex: "Guide des commandes Linux", "Introduction à Python", etc.)</p>
+          <p class="font-semibold mb-2">Exigences :</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+            <li>Au moins 5 pages HTML</li>
+            <li>Navigation entre les pages</li>
+            <li>Exemples de code avec balises <code class="bg-gray-100 px-2 py-1 rounded">&lt;pre&gt;&lt;code&gt;</code></li>
+            <li>Au moins 10 commits avec des messages clairs</li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Sujet de votre documentation :</label>
+            <input type="text" id="ex12-subject" class="input-field" placeholder="Guide des commandes Git" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL du dépôt GitHub :</label>
+            <input type="url" id="ex12-url" class="input-field" placeholder="https://github.com/..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 13 -->
+      <div class="card bg-purple-50 border-purple-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🎯 Exercice 13 : Contribuer à un projet</h4>
+        <p class="text-gray-700 mb-4"><strong>Projet :</strong> Fork et contribution</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Instructions :</p>
+          <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+            <li>Trouvez un projet open source qui accepte les contributions (ex: awesome lists, documentation)</li>
+            <li>Forkez le projet sur votre compte GitHub</li>
+            <li>Clonez votre fork localement</li>
+            <li>Faites une petite amélioration (corriger une faute, améliorer le README)</li>
+            <li>Committez et poussez sur votre fork</li>
+            <li>Créez une Pull Request (même si elle n'est pas acceptée, c'est l'expérience qui compte !)</li>
+          </ol>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Projet original (URL) :</label>
+            <input type="url" id="ex13-original" class="input-field" placeholder="https://github.com/..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Votre fork (URL) :</label>
+            <input type="url" id="ex13-fork" class="input-field" placeholder="https://github.com/votre-nom/..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Quelle amélioration avez-vous apportée ?</label>
+            <textarea id="ex13-improvement" class="input-field h-24 resize-none" placeholder="Correction d'une faute de frappe dans le README..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 14 -->
+      <div class="card bg-purple-50 border-purple-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🎯 Exercice 14 : Projet collaboratif</h4>
+        <p class="text-gray-700 mb-4"><strong>Projet :</strong> Travailler en équipe sur GitHub</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Instructions :</p>
+          <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+            <li>Formez une équipe de 2-3 personnes</li>
+            <li>Créez un dépôt partagé (un membre crée, les autres sont ajoutés comme collaborateurs)</li>
+            <li>Chaque membre crée sa propre page HTML de présentation</li>
+            <li>Fusionnez tout dans une page d'accueil commune</li>
+            <li>Gérez les conflits si nécessaire</li>
+          </ol>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Membres de l'équipe (noms GitHub) :</label>
+            <input type="text" id="ex14-team" class="input-field" placeholder="@user1, @user2, @user3" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL du projet collaboratif :</label>
+            <input type="url" id="ex14-url" class="input-field" placeholder="https://github.com/..." />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Avez-vous rencontré des conflits ? Comment les avez-vous résolus ?</label>
+            <textarea id="ex14-conflicts" class="input-field h-24 resize-none" placeholder="Oui/Non, et comment..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice 15 -->
+      <div class="card bg-purple-50 border-purple-200 mb-6">
+        <h4 class="font-bold text-lg mb-3">🎯 Exercice 15 : Projet Final - Application Web Complète</h4>
+        <p class="text-gray-700 mb-4"><strong>Projet :</strong> Créer, versionner et déployer une application web complète</p>
+        <div class="bg-white p-4 rounded-lg mb-4">
+          <p class="font-semibold mb-2">Choix du projet (choisissez-en un) :</p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <li><strong>To-Do List</strong> : Application de gestion de tâches avec localStorage</li>
+            <li><strong>Calculatrice</strong> : Calculatrice scientifique interactive</li>
+            <li><strong>Quiz Interactif</strong> : Quiz sur un sujet de votre choix avec score</li>
+            <li><strong>Galerie Photo</strong> : Galerie d'images responsive avec filtres</li>
+            <li><strong>Votre idée</strong> : Proposez votre propre projet !</li>
+          </ul>
+          <p class="font-semibold mb-2 mt-4">Exigences minimales :</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+            <li>Code HTML/CSS/JavaScript propre et commenté</li>
+            <li>Au moins 20 commits avec des messages descriptifs</li>
+            <li>README.md complet avec screenshots</li>
+            <li>Fichier .gitignore approprié</li>
+            <li>Déployé sur Netlify</li>
+            <li>Code responsive (mobile-friendly)</li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Nom du projet choisi :</label>
+            <input type="text" id="ex15-name" class="input-field" placeholder="Ma Todo List Interactive" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL GitHub :</label>
+            <input type="url" id="ex15-github" class="input-field" placeholder="https://github.com/votre-nom/projet" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">URL Netlify :</label>
+            <input type="url" id="ex15-netlify" class="input-field" placeholder="https://mon-projet.netlify.app" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Nombre total de commits effectués :</label>
+            <input type="number" id="ex15-commits" class="input-field" min="20" placeholder="25" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Décrivez brièvement votre projet et ce que vous avez appris :</label>
+            <textarea id="ex15-description" class="input-field h-40 resize-none" placeholder="Mon projet est une application de...&#10;&#10;J'ai appris à..."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boutons d'action -->
+    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+      <button type="button" id="save-all-btn" class="btn-primary flex-1">
+        💾 Sauvegarder tout
+      </button>
+      <button type="button" id="export-btn" class="btn-secondary flex-1">
+        📄 Exporter mes réponses
+      </button>
+    </div>
+
+    <!-- Message de confirmation -->
+    <div id="save-message" class="hidden card bg-green-50 border-green-300">
+      <p class="text-green-700 font-semibold">✅ Toutes vos réponses ont été sauvegardées !</p>
+    </div>
+
+    <!-- Retour au cours et QCM -->
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
+      <a href="/cours" class="card bg-blue-50 border-blue-200 hover:shadow-lg transition-shadow text-center">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">📚 Retour au cours</h3>
+        <p class="text-gray-700">Revoir les notions théoriques</p>
+      </a>
+      <a href="/qcm" class="card bg-purple-50 border-purple-200 hover:shadow-lg transition-shadow text-center">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">✅ Passer le QCM</h3>
+        <p class="text-gray-700">Valider vos connaissances</p>
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    // Sauvegarde automatique
+    const inputs = document.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+      const id = input.id;
+      
+      // Charger la valeur sauvegardée
+      const saved = localStorage.getItem(`exercices_${id}`);
+      if (saved) {
+        input.value = saved;
+      }
+      
+      // Sauvegarder à chaque modification
+      input.addEventListener('input', () => {
+        localStorage.setItem(`exercices_${id}`, input.value);
+        showSaveIndicator();
+      });
+    });
+
+    // Bouton sauvegarder tout
+    document.getElementById('save-all-btn').addEventListener('click', () => {
+      const message = document.getElementById('save-message');
+      message.classList.remove('hidden');
+      setTimeout(() => {
+        message.classList.add('hidden');
+      }, 3000);
+    });
+
+    // Bouton exporter
+    document.getElementById('export-btn').addEventListener('click', () => {
+      let exportText = '=== MES RÉPONSES AUX EXERCICES GITHUB ===\n\n';
+      
+      inputs.forEach(input => {
+        if (input.value) {
+          const label = input.previousElementSibling?.textContent || input.placeholder || input.id;
+          exportText += `${label}\n${input.value}\n\n`;
+        }
+      });
+      
+      const blob = new Blob([exportText], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'mes-exercices-github.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Indicateur de sauvegarde
+    function showSaveIndicator() {
+      let indicator = document.getElementById('save-indicator');
+      if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.id = 'save-indicator';
+        indicator.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
+        indicator.textContent = '✓ Sauvegardé';
+        document.body.appendChild(indicator);
+      }
+      indicator.style.display = 'block';
+      setTimeout(() => {
+        indicator.style.display = 'none';
+      }, 1500);
+    }
+
+    // Scroll smooth pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</Layout>

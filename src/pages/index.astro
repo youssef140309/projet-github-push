@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Accueil">
+  <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl font-display font-bold mb-6">GitHub Pédagogique</h1>
+      <p class="text-xl mb-4 text-blue-100">Support de cours progressif et participatif</p>
+      <p class="text-lg text-blue-200">La Salle Saint-Nicolas · Bac Pro CIEL, BTS CIEL, BTS SIO</p>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="mb-16">
+      <h2 class="text-4xl font-display font-bold text-gray-900 mb-8 text-center">
+        Bienvenue sur votre parcours GitHub !
+      </h2>
+      
+      <div class="card mb-8">
+        <p class="text-lg text-gray-700 mb-4">
+          Ce support de cours vous accompagne pas à pas dans la découverte et la maîtrise de <strong>GitHub</strong>, 
+          l'outil incontournable du développeur moderne.
+        </p>
+        <p class="text-lg text-gray-700">
+          À travers ce parcours progressif et interactif, vous apprendrez à :
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 mt-4 space-y-2 ml-4">
+          <li>Comprendre ce qu'est GitHub et son importance</li>
+          <li>Installer et configurer Git sur votre ordinateur</li>
+          <li>Maîtriser les commandes Git essentielles</li>
+          <li>Créer et gérer vos projets sur GitHub</li>
+          <li>Déployer vos applications sur Netlify</li>
+        </ul>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <a href="/cours" class="card bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="text-4xl mb-4">📚</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Cours Progressif</h3>
+          <p class="text-gray-700">Un parcours structuré adapté à votre niveau, même si vous découvrez GitHub</p>
+        </a>
+
+        <a href="/exercices" class="card bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="text-4xl mb-4">✍️</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Exercices Pratiques</h3>
+          <p class="text-gray-700">Des exercices intégrés pour mettre en pratique vos connaissances</p>
+        </a>
+
+        <a href="/qcm" class="card bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">QCM Final</h3>
+          <p class="text-gray-700">20 questions pour valider votre compréhension du cours</p>
+        </a>
+      </div>
+
+      <div class="card bg-gradient-to-br from-yellow-50 to-orange-50 border-orange-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">🎯 Objectif pratique</h3>
+        <p class="text-lg text-gray-700 mb-4">
+          À la fin de ce cours, vous serez capable de :
+        </p>
+        <ol class="list-decimal list-inside text-lg text-gray-700 space-y-2 ml-4">
+          <li>Pousser <strong>ce projet lui-même</strong> sur votre compte GitHub</li>
+          <li>Le déployer en ligne sur <strong>Netlify</strong></li>
+          <li>Partager votre travail avec vos enseignants</li>
+        </ol>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/cours" class="btn-primary inline-block text-lg px-8 py-4">
+          Commencer le cours →
+        </a>
+      </div>
+    </section>
+
+    <section class="card bg-blue-50 border-blue-200">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">💾 Fonctionnalités interactives</h3>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start">
+          <span class="text-green-600 mr-2">✓</span>
+          <span><strong>Sauvegarde automatique :</strong> Vos réponses sont enregistrées localement dans votre navigateur</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-600 mr-2">✓</span>
+          <span><strong>Reprise possible :</strong> Vous pouvez quitter et revenir sans perdre votre progression</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-600 mr-2">✓</span>
+          <span><strong>Envoi des résultats :</strong> Le QCM final peut être envoyé à votre enseignant (mormin@st-nicolas.fr)</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,676 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="QCM Final">
+  <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-display font-bold mb-4">QCM Final</h1>
+      <p class="text-xl text-purple-100">20 questions pour valider vos connaissances</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <div class="card bg-blue-50 border-blue-200 mb-8">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">📋 Instructions</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li>✓ Répondez aux 20 questions ci-dessous</li>
+        <li>✓ Vos réponses sont sauvegardées automatiquement</li>
+        <li>✓ Une seule réponse par question</li>
+        <li>✓ À la fin, cliquez sur "Calculer mon score"</li>
+        <li>✓ Vous pouvez ensuite envoyer vos résultats par email</li>
+      </ul>
+    </div>
+
+    <form id="qcm-form" class="space-y-8">
+      
+      <!-- Question 1 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">1. Qu'est-ce que Git ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q1" value="a" class="mt-1 mr-3" />
+            <span>a) Un réseau social pour développeurs</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q1" value="b" class="mt-1 mr-3" />
+            <span>b) Un système de contrôle de version distribué</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q1" value="c" class="mt-1 mr-3" />
+            <span>c) Un langage de programmation</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q1" value="d" class="mt-1 mr-3" />
+            <span>d) Un serveur web</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">2. Quelle est la différence principale entre Git et GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q2" value="a" class="mt-1 mr-3" />
+            <span>a) Il n'y a aucune différence</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q2" value="b" class="mt-1 mr-3" />
+            <span>b) Git est un logiciel local, GitHub est une plateforme web</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q2" value="c" class="mt-1 mr-3" />
+            <span>c) GitHub est gratuit, Git est payant</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q2" value="d" class="mt-1 mr-3" />
+            <span>d) Git fonctionne uniquement sur Windows</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">3. Quelle commande permet d'initialiser un nouveau dépôt Git ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q3" value="a" class="mt-1 mr-3" />
+            <span>a) git start</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q3" value="b" class="mt-1 mr-3" />
+            <span>b) git init</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q3" value="c" class="mt-1 mr-3" />
+            <span>c) git create</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q3" value="d" class="mt-1 mr-3" />
+            <span>d) git new</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">4. À quoi sert la commande "git status" ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q4" value="a" class="mt-1 mr-3" />
+            <span>a) Supprimer des fichiers</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q4" value="b" class="mt-1 mr-3" />
+            <span>b) Afficher l'état des fichiers du projet</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q4" value="c" class="mt-1 mr-3" />
+            <span>c) Envoyer les fichiers sur GitHub</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q4" value="d" class="mt-1 mr-3" />
+            <span>d) Créer une nouvelle branche</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">5. Quelle commande ajoute TOUS les fichiers modifiés ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q5" value="a" class="mt-1 mr-3" />
+            <span>a) git add all</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q5" value="b" class="mt-1 mr-3" />
+            <span>b) git add .</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q5" value="c" class="mt-1 mr-3" />
+            <span>c) git add *</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q5" value="d" class="mt-1 mr-3" />
+            <span>d) git add everything</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">6. Qu'est-ce qu'un "commit" ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q6" value="a" class="mt-1 mr-3" />
+            <span>a) Une sauvegarde de l'état du projet à un instant T</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q6" value="b" class="mt-1 mr-3" />
+            <span>b) Un fichier de configuration</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q6" value="c" class="mt-1 mr-3" />
+            <span>c) Une branche du projet</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q6" value="d" class="mt-1 mr-3" />
+            <span>d) Un utilisateur GitHub</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">7. Comment créer un commit avec le message "Mon premier commit" ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q7" value="a" class="mt-1 mr-3" />
+            <span>a) git commit Mon premier commit</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q7" value="b" class="mt-1 mr-3" />
+            <span>b) git commit -m "Mon premier commit"</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q7" value="c" class="mt-1 mr-3" />
+            <span>c) git save "Mon premier commit"</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q7" value="d" class="mt-1 mr-3" />
+            <span>d) git push "Mon premier commit"</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">8. Quelle commande affiche l'historique des commits ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q8" value="a" class="mt-1 mr-3" />
+            <span>a) git history</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q8" value="b" class="mt-1 mr-3" />
+            <span>b) git log</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q8" value="c" class="mt-1 mr-3" />
+            <span>c) git show</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q8" value="d" class="mt-1 mr-3" />
+            <span>d) git list</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">9. Comment lier un dépôt local à GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q9" value="a" class="mt-1 mr-3" />
+            <span>a) git connect</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q9" value="b" class="mt-1 mr-3" />
+            <span>b) git link origin</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q9" value="c" class="mt-1 mr-3" />
+            <span>c) git remote add origin [URL]</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q9" value="d" class="mt-1 mr-3" />
+            <span>d) git github connect</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">10. Quelle commande envoie vos commits sur GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q10" value="a" class="mt-1 mr-3" />
+            <span>a) git send</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q10" value="b" class="mt-1 mr-3" />
+            <span>b) git upload</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q10" value="c" class="mt-1 mr-3" />
+            <span>c) git push</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q10" value="d" class="mt-1 mr-3" />
+            <span>d) git commit --remote</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">11. Quelle commande récupère les modifications depuis GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q11" value="a" class="mt-1 mr-3" />
+            <span>a) git fetch</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q11" value="b" class="mt-1 mr-3" />
+            <span>b) git pull</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q11" value="c" class="mt-1 mr-3" />
+            <span>c) git download</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q11" value="d" class="mt-1 mr-3" />
+            <span>d) git get</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">12. Comment télécharger un projet complet depuis GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q12" value="a" class="mt-1 mr-3" />
+            <span>a) git download [URL]</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q12" value="b" class="mt-1 mr-3" />
+            <span>b) git clone [URL]</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q12" value="c" class="mt-1 mr-3" />
+            <span>c) git copy [URL]</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q12" value="d" class="mt-1 mr-3" />
+            <span>d) git get [URL]</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">13. À quoi sert le fichier .gitignore ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q13" value="a" class="mt-1 mr-3" />
+            <span>a) Ignorer les erreurs Git</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q13" value="b" class="mt-1 mr-3" />
+            <span>b) Exclure certains fichiers du dépôt Git</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q13" value="c" class="mt-1 mr-3" />
+            <span>c) Cacher le dépôt aux autres utilisateurs</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q13" value="d" class="mt-1 mr-3" />
+            <span>d) Configurer GitHub</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">14. Qu'est-ce que Netlify ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q14" value="a" class="mt-1 mr-3" />
+            <span>a) Un système de contrôle de version</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q14" value="b" class="mt-1 mr-3" />
+            <span>b) Une plateforme de déploiement de sites web</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q14" value="c" class="mt-1 mr-3" />
+            <span>c) Un langage de programmation</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q14" value="d" class="mt-1 mr-3" />
+            <span>d) Un éditeur de code</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">15. Netlify déploie automatiquement votre site quand vous :</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q15" value="a" class="mt-1 mr-3" />
+            <span>a) Faites un git commit</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q15" value="b" class="mt-1 mr-3" />
+            <span>b) Faites un git push vers GitHub</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q15" value="c" class="mt-1 mr-3" />
+            <span>c) Modifiez un fichier localement</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q15" value="d" class="mt-1 mr-3" />
+            <span>d) Ouvrez votre navigateur</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 16 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">16. Quel est le bon ordre pour pousser un nouveau projet sur GitHub ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q16" value="a" class="mt-1 mr-3" />
+            <span>a) git push → git init → git commit → git add</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q16" value="b" class="mt-1 mr-3" />
+            <span>b) git init → git add → git commit → git push</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q16" value="c" class="mt-1 mr-3" />
+            <span>c) git add → git push → git init → git commit</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q16" value="d" class="mt-1 mr-3" />
+            <span>d) git commit → git init → git add → git push</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 17 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">17. Un bon message de commit doit être :</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q17" value="a" class="mt-1 mr-3" />
+            <span>a) Court et vague comme "update"</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q17" value="b" class="mt-1 mr-3" />
+            <span>b) Clair et descriptif des modifications</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q17" value="c" class="mt-1 mr-3" />
+            <span>c) Très long avec tous les détails techniques</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q17" value="d" class="mt-1 mr-3" />
+            <span>d) Optionnel, on peut ne rien écrire</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 18 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">18. Le fichier README.md sert à :</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q18" value="a" class="mt-1 mr-3" />
+            <span>a) Configurer Git</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q18" value="b" class="mt-1 mr-3" />
+            <span>b) Documenter le projet</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q18" value="c" class="mt-1 mr-3" />
+            <span>c) Stocker les mots de passe</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q18" value="d" class="mt-1 mr-3" />
+            <span>d) Exécuter du code</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 19 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">19. Que doit-on éviter de mettre dans un dépôt Git ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q19" value="a" class="mt-1 mr-3" />
+            <span>a) Le code source</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q19" value="b" class="mt-1 mr-3" />
+            <span>b) La documentation</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q19" value="c" class="mt-1 mr-3" />
+            <span>c) Les mots de passe et fichiers de configuration sensibles</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q19" value="d" class="mt-1 mr-3" />
+            <span>d) Les fichiers HTML et CSS</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 20 -->
+      <div class="card">
+        <h3 class="font-bold text-lg mb-4">20. Pourquoi GitHub est-il important pour un développeur ?</h3>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q20" value="a" class="mt-1 mr-3" />
+            <span>a) C'est juste une mode passagère</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q20" value="b" class="mt-1 mr-3" />
+            <span>b) Portfolio professionnel, collaboration, et contribution open source</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q20" value="c" class="mt-1 mr-3" />
+            <span>c) Uniquement pour les grandes entreprises</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="q20" value="d" class="mt-1 mr-3" />
+            <span>d) Obligatoire uniquement pour les projets web</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Informations élève -->
+      <div class="card bg-purple-50 border-purple-200">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">📝 Vos informations</h3>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Nom et Prénom *</label>
+            <input type="text" id="student-name" class="input-field" required placeholder="Jean Dupont" />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Formation *</label>
+            <select id="student-formation" class="input-field" required>
+              <option value="">Sélectionnez votre formation</option>
+              <option value="Bac Pro CIEL">Bac Pro CIEL</option>
+              <option value="BTS CIEL">BTS CIEL</option>
+              <option value="BTS SIO">BTS SIO</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2 font-medium">Classe *</label>
+            <input type="text" id="student-class" class="input-field" required placeholder="1ère année, 2ème année..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Boutons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button type="button" id="calculate-btn" class="btn-primary flex-1">
+          📊 Calculer mon score
+        </button>
+        <button type="button" id="reset-btn" class="btn-secondary flex-1">
+          🔄 Réinitialiser
+        </button>
+      </div>
+
+      <!-- Résultat -->
+      <div id="result" class="hidden card bg-gradient-to-br from-green-50 to-blue-50 border-green-300">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">🎯 Votre résultat</h3>
+        <p id="score-text" class="text-xl mb-4"></p>
+        <p id="feedback-text" class="text-gray-700 mb-6"></p>
+        
+        <div class="space-y-4">
+          <button type="button" id="email-btn" class="btn-primary w-full">
+            📧 Envoyer les résultats à mon professeur
+          </button>
+          <p class="text-sm text-gray-600 text-center">
+            Les résultats seront envoyés à : <strong>mormin@st-nicolas.fr</strong>
+          </p>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script>
+    // Bonnes réponses
+    const correctAnswers = {
+      q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b',
+      q6: 'a', q7: 'b', q8: 'b', q9: 'c', q10: 'c',
+      q11: 'b', q12: 'b', q13: 'b', q14: 'b', q15: 'b',
+      q16: 'b', q17: 'b', q18: 'b', q19: 'c', q20: 'b'
+    };
+
+    // Sauvegarde automatique
+    const form = document.getElementById('qcm-form');
+    const inputs = form.querySelectorAll('input, select');
+    
+    inputs.forEach(input => {
+      const savedValue = localStorage.getItem(`qcm_${input.name || input.id}`);
+      if (savedValue) {
+        if (input.type === 'radio') {
+          if (input.value === savedValue) input.checked = true;
+        } else {
+          input.value = savedValue;
+        }
+      }
+      
+      input.addEventListener('change', () => {
+        localStorage.setItem(`qcm_${input.name || input.id}`, input.value);
+      });
+    });
+
+    // Calculer le score
+    document.getElementById('calculate-btn').addEventListener('click', () => {
+      let score = 0;
+      let answered = 0;
+      
+      for (let i = 1; i <= 20; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected) {
+          answered++;
+          if (selected.value === correctAnswers[`q${i}`]) {
+            score++;
+          }
+        }
+      }
+      
+      if (answered < 20) {
+        alert(`Vous n'avez répondu qu'à ${answered} questions sur 20. Veuillez répondre à toutes les questions.`);
+        return;
+      }
+      
+      const percentage = (score / 20) * 100;
+      const resultDiv = document.getElementById('result');
+      const scoreText = document.getElementById('score-text');
+      const feedbackText = document.getElementById('feedback-text');
+      
+      scoreText.textContent = `Score : ${score}/20 (${percentage}%)`;
+      
+      if (percentage >= 90) {
+        feedbackText.textContent = '🎉 Excellent ! Vous maîtrisez parfaitement GitHub !';
+        feedbackText.className = 'text-green-700 mb-6 text-lg font-semibold';
+      } else if (percentage >= 75) {
+        feedbackText.textContent = '✅ Très bien ! Vous avez une bonne compréhension de GitHub.';
+        feedbackText.className = 'text-blue-700 mb-6 text-lg font-semibold';
+      } else if (percentage >= 60) {
+        feedbackText.textContent = '👍 Bien ! Revoyez quelques points et vous serez au top.';
+        feedbackText.className = 'text-yellow-700 mb-6 text-lg font-semibold';
+      } else {
+        feedbackText.textContent = '📚 Continuez vos efforts. Relisez le cours et recommencez !';
+        feedbackText.className = 'text-orange-700 mb-6 text-lg font-semibold';
+      }
+      
+      resultDiv.classList.remove('hidden');
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      localStorage.setItem('qcm_score', score);
+      localStorage.setItem('qcm_percentage', percentage);
+    });
+
+    // Réinitialiser
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      if (confirm('Êtes-vous sûr de vouloir réinitialiser toutes vos réponses ?')) {
+        for (let i = 1; i <= 20; i++) {
+          localStorage.removeItem(`qcm_q${i}`);
+          document.querySelectorAll(`input[name="q${i}"]`).forEach(input => input.checked = false);
+        }
+        document.getElementById('result').classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    // Envoyer par email
+    document.getElementById('email-btn').addEventListener('click', () => {
+      const name = document.getElementById('student-name').value;
+      const formation = document.getElementById('student-formation').value;
+      const studentClass = document.getElementById('student-class').value;
+      
+      if (!name || !formation || !studentClass) {
+        alert('Veuillez remplir toutes vos informations (nom, formation, classe)');
+        return;
+      }
+      
+      const score = localStorage.getItem('qcm_score');
+      const percentage = localStorage.getItem('qcm_percentage');
+      
+      // Récupérer toutes les réponses
+      let answersDetails = '';
+      for (let i = 1; i <= 20; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const userAnswer = selected ? selected.value : 'Non répondu';
+        const isCorrect = userAnswer === correctAnswers[`q${i}`];
+        answersDetails += `Q${i}: ${userAnswer} ${isCorrect ? '✓' : '✗ (Réponse: ' + correctAnswers[`q${i}`] + ')'}\n`;
+      }
+      
+      const subject = `[QCM GitHub] Résultats de ${name}`;
+      const body = `Bonjour,
+
+Je vous envoie mes résultats du QCM GitHub.
+
+INFORMATIONS ÉLÈVE
+- Nom : ${name}
+- Formation : ${formation}
+- Classe : ${studentClass}
+
+RÉSULTAT
+- Score : ${score}/20 (${percentage}%)
+
+DÉTAIL DES RÉPONSES
+${answersDetails}
+
+Cordialement,
+${name}`;
+      
+      const mailtoLink = `mailto:mormin@st-nicolas.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+    });
+  </script>
+</Layout>

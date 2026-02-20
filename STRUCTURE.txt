@@ -1,0 +1,16 @@
+./.gitignore
+./GUIDE_DEPLOIEMENT.md
+./INSTALLATION.md
+./README.md
+./STRUCTURE.txt
+./astro.config.mjs
+./netlify.toml
+./package.json
+./src/layouts/Layout.astro
+./src/pages/cours.astro
+./src/pages/exercices.astro
+./src/pages/index.astro
+./src/pages/qcm.astro
+./src/styles/global.css
+./tailwind.config.mjs
+./tsconfig.json
